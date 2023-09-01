@@ -1,42 +1,87 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 5rem;
+  z-index: 1;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+
+.navbar h4{
+  font-weight: 700;
+  height: 1.6rem;
+  margin-top: 1.8rem;
+  font-size: 1.2rem; 
+}
+
+.navbar > ul{
+  display: flex;
+  width: 12rem;
+  color: rgb(24, 5, 5);
+  margin-top: 1.8rem;
+  text-decoration: none;
+  list-style: none;
+  height: 1rem;
+  justify-content: space-between;
+}
+
+.navbar > ul li{
+  text-decoration: none;
+  color: white;
+  height: 1rem;
+}
+
+.hero{
+  position: relative;
+  display: flex;
+  height: 66vh;
+  justify-content: space-between;
+}
+
+.heroimage{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 50em;
+  height: 26.9em;
+  z-index: -1;
+}
+
+
+.hero-article{
+  width: 40%;
+  padding: 3rem;
+}
+
+.hero-article > h1{
+  width: 60%;
+  font-size: 2rem;
+}
+
+.hero-article > p{
+  width: 23rem;
+}
+
+.About{
+  display: flex;
+  
+}
+
+.About img{
+  width: 60em;  
+  height: 13.5em;  
+}
+
+.About .about-text{
+  width: 100em;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}

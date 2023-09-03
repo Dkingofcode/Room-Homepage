@@ -5,6 +5,9 @@ import image2 from "./assets/desktop-image-hero-2.jpg";
 import image3 from "./assets/desktop-image-hero-1.jpg";
 import aboutdark from "./assets/image-about-dark.jpg";
 import aboutlight from './assets/image-about-light.jpg';
+import iconleft from './assets/icon-angle-left.svg';
+import iconright from './assets/icon-angle-right.svg';
+
 
 let screens = [
   {image1},
@@ -59,8 +62,8 @@ function App() {
         <span>shop now</span>
         
         <button>
-         <img  />
-         <img  />
+         <img src={iconleft} />
+         <img src={iconright} />
         </button>
         </div>
 

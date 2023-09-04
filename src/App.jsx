@@ -61,9 +61,11 @@ function App() {
         </p>
         <span>shop now</span>
         
-        <button>
-         <img src={iconleft} />
-         <img src={iconright} />
+        <button className='btnleft'>
+         <img src={iconleft} alt='left-icon' />
+         </button>
+         <button className='btnright'>
+         <img src={iconright} alt='right-icon' />
         </button>
         </div>
 

@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
+}
+
+body{
+  font-family: 'League Spartan', sans-serif;
 }
 
 .navbar{
@@ -50,38 +56,78 @@
   top: 0;
   left: 0;
   position: absolute;
-  width: 50em;
+  width: 48em;
   height: 26.9em;
   z-index: -1;
 }
 
 
 .hero-article{
-  width: 40%;
+  position: relative;
+  width: 59em;
   padding: 3rem;
+  border: 2px solid;
 }
 
 .hero-article > h1{
-  width: 60%;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .hero-article > p{
   width: 23rem;
 }
 
-.About{
-  display: flex;
-  
+.btnleft{
+  background-color: black;
+  position: absolute;
+  top: 6;
+  left: 6;
 }
+
+.btnright{
+  position: absolute;
+  top: 0;
+  background-color: black;
+  left: 0;
+}
+
+.About{
+  display: flex;  
+}
+
 
 .About img{
   width: 60em;  
   height: 13.5em;  
 }
 
+
+
 .About .about-text{
   width: 100em;
   text-align: center;
+  line-height: 1.2rem;
+  padding: 1rem 1.7rem;
 }
 
+.About .about-text > h1{
+  margin-top: 1.4rem;
+  text-align: left;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+
+.About .about-text > p{
+  text-align: left;
+  color: hsl(0, 0%, 63%);
+}
+
+/* 
+- Dark Gray: hsl(0, 0%, 63%)
+- Black: hsl(0, 0%, 0%)
+- White: hsl(0, 0%, 100%)
+- Very Dark Gray: hsl(0, 0%, 27%) */

@@ -49,7 +49,7 @@ function App() {
        </ul>
        </nav>        
       
-        <img src={image1} className='heroimage' alt="hero-image" />
+      
         
         <div className='hero-article'>
         <h1>Discover innovative ways to decorate</h1>

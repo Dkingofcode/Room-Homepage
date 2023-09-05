@@ -2,17 +2,17 @@ import { useState } from 'react';
 import './App.css';
 import image1 from "./assets/desktop-image-hero-1.jpg";
 import image2 from "./assets/desktop-image-hero-2.jpg";
-import image3 from "./assets/desktop-image-hero-1.jpg";
+import image3 from "./assets/desktop-image-hero-3.jpg";
 import aboutdark from "./assets/image-about-dark.jpg";
 import aboutlight from './assets/image-about-light.jpg';
 import iconleft from './assets/icon-angle-left.svg';
 import iconright from './assets/icon-angle-right.svg';
-
+import arrow from './assets/icon-arrow.svg';
 
 let screens = [
-  {image1},
-  {image2},
-  {image3}
+  image1,
+  image2,
+  image3
 ]
 
 let articleheaders = [
@@ -24,22 +24,30 @@ let articleheaders = [
 let articleText = [
   "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
   "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we're in most major cities throughout the country. Find the branch nearest to you using our store locator. Any questions? Don't hesitate to contact us today.",
-  "Our modern furnoture store provides a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office."
+  "Our modern furniture store provides a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office."
 
 ]
 
 
 function App() {
- const [screen, setScreen] = useState(screens);
- const [header, setHeader] = useState(articleheaders);
- const [text, setText] = useState(articleText);  
+ const [screen, setScreen] = useState(0);
+ const [header, setHeader] = useState(articleheaders[0]);
+ const [text, setText] = useState(articleText[0]);  
+
+  const changeBackgroundImage = () => {
+      setScreen((screen + 1) % screens.length);
+  
+     // Update the header and text based on the screen
+     setHeader(articleheaders[screen]);
+     setText(articleText[screen]);
+    }
 
   return (
     <>
       <div className='main'>
       
        <section className='hero'>
-       <nav className='navbar'>
+       <nav className='navbar' style={{ background: `url(${screens[screen]})`}}>
        <h4>room</h4> 
        <ul>
         <li>home</li>
@@ -52,19 +60,16 @@ function App() {
       
         
         <div className='hero-article'>
-        <h1>Discover innovative ways to decorate</h1>
-        <p>We provide unmatched quality, comfort, and  
-          style for property owner's across the country.
-          Our experts combine form and function in bringing
-          yoour vision to life. Create a room in your own style with our collection
-          and make your property a reflection of you and what you have.
+        <h1>{header}</h1>
+        <p>
+         {text}
         </p>
-        <span>shop now</span>
+        <span>shop now  <img src={arrow} alt="arrow icon" /> </span>
         
         <button className='btnleft'>
          <img src={iconleft} alt='left-icon' />
          </button>
-         <button className='btnright'>
+         <button className='btnright' onClick={changeBackgroundImage}>
          <img src={iconright} alt='right-icon' />
         </button>
         </div>

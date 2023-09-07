@@ -66,13 +66,15 @@ function App() {
         </p>
         <span>shop now  <img src={arrow} alt="arrow icon" /> </span>
         
+         
+        </div>
         <button className='btnleft'>
          <img src={iconleft} alt='left-icon' />
          </button>
          <button className='btnright' onClick={changeBackgroundImage}>
          <img src={iconright} alt='right-icon' />
         </button>
-        </div>
+
 
        </section>
 
